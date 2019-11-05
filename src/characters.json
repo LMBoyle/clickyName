@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "name": "Rick",
+    "img": "https://vignette.wikia.nocookie.net/rickandmorty/images/a/a6/Rick_Sanchez.png/revision/latest/scale-to-width-down/620?cb=20160923150728"
+  },
+  {
+    "id": 2,
+    "name": "Morty",
+    "img": "https://vignette.wikia.nocookie.net/rickandmorty/images/4/41/Morty_Smith.jpg/revision/latest?cb=20170217193441"
+  },
+  {
+    "id": 3,
+    "name": "Summer",
+    "img": "https://vignette.wikia.nocookie.net/rickandmorty/images/a/ad/Summer_is_cool.jpeg/revision/latest?cb=20160919183158"
+  },
+  {
+    "id": 4,
+    "name": "Beth",
+    "img": "https://vignette.wikia.nocookie.net/rickandmorty/images/5/58/Beth_Smith.png/revision/latest?cb=20151204220729"
+  },
+  {
+    "id": 5,
+    "name": "Jerry",
+    "img": "https://vignette.wikia.nocookie.net/rickandmorty/images/f/f1/Jerry_Smith.png/revision/latest?cb=20160923151111"
+  },
+  {
+    "id": 6,
+    "name": "Mr Poopybutthole",
+    "img": "https://vignette.wikia.nocookie.net/rickandmorty/images/f/fb/Mrpb2.jpg/revision/latest?cb=20171003190504"
+  },
+  {
+    "id": 7,
+    "name": "Mr. Meeseeks",
+    "img": "https://vignette.wikia.nocookie.net/rickandmorty/images/6/6c/MeeseeksHQ.png/revision/latest?cb=20150930232412"
+  },
+  {
+    "id": 8,
+    "name": "Birdperson",
+    "img": "https://vignette.wikia.nocookie.net/rickandmorty/images/b/b1/Birdperson.png/revision/latest?cb=20140415133633"
+  },
+  {
+    "id": 9,
+    "name": "Tammy",
+    "img": "https://vignette.wikia.nocookie.net/rickandmorty/images/0/08/Tammy.png/revision/latest?cb=20140523063749"
+  },
+  {
+    "id": 10,
+    "name": "Jessica",
+    "img": "https://vignette.wikia.nocookie.net/rickandmorty/images/e/e8/Jessica.png/revision/latest?cb=20150706222334"
+  },
+  {
+    "id": 11,
+    "name": "Snowball",
+    "img": "https://vignette.wikia.nocookie.net/rickandmorty/images/7/70/Snuffles-helmet.jpg/revision/latest?cb=20131212193614"
+  },
+  {
+    "id": 12,
+    "name": "Phoenixperson",
+    "img": "https://vignette.wikia.nocookie.net/rickandmorty/images/e/e1/Phoenixperson.transparent.png/revision/latest?cb=20170516005728"
+  },
+  {
+    "id": 13,
+    "name": "Mr. Goldenfold",
+    "img": "https://vignette.wikia.nocookie.net/rickandmorty/images/0/02/S1e1_mr_goldenfold.png/revision/latest?cb=20160904212639"
+  },
+  {
+    "id": 14,
+    "name": "Scary Terry",
+    "img": "https://static.tvtropes.org/pmwiki/pub/images/11_2.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Brad",
+    "img": "https://vignette.wikia.nocookie.net/rickandmorty/images/a/ac/Brad.jpg/revision/latest?cb=20150730222204"
+  }
+]
