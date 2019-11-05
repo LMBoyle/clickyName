@@ -10,14 +10,15 @@
 }
 
 .card > .img-container {
-  height: 60%;
+  height: 100%;
   overflow: hidden;
   text-align: center;
   background:#6CADDC;
 }
 
 .card > .img-container > img {
-  width: 60%
+  width: 100%;
+  object-fit: cover;
 }
 
 .card > .content {
@@ -34,7 +35,7 @@
   margin-top: 18px;
 }
 
-.card > .clicked {
+/* .card > .clicked {
   color: #ff1744;
   font-size: 48px;
   position: absolute;
@@ -45,4 +46,4 @@
 
 .card > .clicked:hover {
   color: #d50000;
-}
+} */
