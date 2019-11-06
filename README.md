@@ -1,1 +1,1 @@
-# clickyName
+# clickyGame
