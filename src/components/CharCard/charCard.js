@@ -1,14 +1,20 @@
+// Imports ===================================================================
+
 import React from "react";
 import "./charCard.css";
 
+// Functions =================================================================
+
 function CharCard(props) {
   return (
-    <div className="card">
-      <div className="img-container clicked" onClick={() => props.setClicked(props.id)}>
+    <div className="card" onClick={() => props.clicked(props.id)}>
+      <div className="img-container">
         <img alt={props.name} src={props.img} />
       </div>
     </div>
   );
 }
+
+// Export ====================================================================
 
 export default CharCard;

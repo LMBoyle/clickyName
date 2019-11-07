@@ -11,17 +11,8 @@ import characters from "./characters.json"
 
 // Functions =================================================================
 
-function shuffle(array) {
-  for (var i = array.length-1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    const temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-  }
-  return array;
-};
 
-// Export ====================================================================
+
 
 class App extends Component {
   state = {
@@ -29,8 +20,24 @@ class App extends Component {
     clicked: false,
   };
 
+  // Shuffle the cards
+  shuffle = (array) => {
+    for (var i = array.length-1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+    return array;
+  };
+  
+  // When clicked, set the character to clicked
+  setClicked = id => {
+    console.log("clicked " + id)
+  }
+
   render() {
-    const shuffledCards = shuffle(characters)
+    const shuffledCards = this.shuffle(characters)
     return (
       <Wrapper>
         <Title> Characters List </Title>
@@ -41,6 +48,7 @@ class App extends Component {
             key={character.id}
             name={character.name}
             img={character.img}
+            clicked={this.setClicked}
           />
         ))}
 
@@ -48,5 +56,7 @@ class App extends Component {
     );
   }
 }
+
+// Export ====================================================================
 
 export default App;
