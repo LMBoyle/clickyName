@@ -1,7 +1,7 @@
 // Imports ===================================================================
 
 import React from "react";
-import "./charCard.css";
+import "./CharCard.css";
 
 // Functions =================================================================
   function Char(props) {

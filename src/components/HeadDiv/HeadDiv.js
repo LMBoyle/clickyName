@@ -1,14 +1,14 @@
 // Imports ===================================================================
 
 import React from "react";
-import "./Wrapper.css";
+import "./HeadDiv.css";
 
 // Functions =================================================================
 
-function Wrapper(props) {
-  return <div className="wrapper">{props.children}</div>;
+function HeadDiv(props) {
+  return <div className="HeadDiv">{props.children}</div>;
 }
 
 // Export ====================================================================
 
-export default Wrapper;
+export default HeadDiv;
