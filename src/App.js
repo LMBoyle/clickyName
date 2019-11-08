@@ -32,9 +32,17 @@ export default
     // When clicked, set the character to clicked
     setClicked = id => {
       console.log("you clicked on the " + id + " character");
-      // console.log("click state " + this.state.characters.isClicked)
-      // let index = characters.findIndex(characters => characters.id === id)
-      // characters[index].isClicked = true
+      let clickedChar = this.state.characters.find(char => char.id === id);
+      console.log(clickedChar)
+
+      clickedChar.isClicked = true
+      
+      this.setState({
+        characters: this.state.characters
+      })
+      // if (!clickedChar.isClicked)
+      
+      this.shuffle()
       console.log(this.state.characters)
     }
 
