@@ -8,16 +8,12 @@ import Char from "./Char"
 
 function CharCard(props) {
   return (
-    <>
-    {props.characters.map(character => 
-      <div className="card" key={character.id} onClick={() => props.onClick(character.id)}>
-        <Char 
-          character={character}
-        />
-      </div>
-    )}
-    </>
-  );
+    <div className="card" key={props.characters.id} onClick={() => props.onClick(props.characters.id)}>
+      <Char 
+        character={props.characters}
+      />
+    </div>
+  )
 }
 
 // Export ====================================================================

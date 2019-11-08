@@ -30,9 +30,9 @@ export default
     }
 
     // When clicked, set the character to clicked
-    setClicked = (id, isClicked) => {
-      console.log("clicked " + id);
-      console.log("click state " + this.state.characters.isClicked)
+    setClicked = id => {
+      console.log("you clicked on the " + id + " character");
+      // console.log("click state " + this.state.characters.isClicked)
       // let index = characters.findIndex(characters => characters.id === id)
       // characters[index].isClicked = true
       console.log(this.state.characters)
@@ -42,10 +42,14 @@ export default
       return (
         <Wrapper>
           <Title> Characters List </Title>
+
+          {this.state.characters.map(character => (
             <CharCard
-              characters={this.state.characters}
-              onClick={() => this.setClicked(this.id)}
+              key={character.id}
+              characters={character}
+              onClick={() => this.setClicked(character.id)}
             />
+          ))}
         </Wrapper>
       );
     }
