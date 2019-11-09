@@ -57,7 +57,7 @@ class App extends Component {
       alert("Game Over!")
       console.log("resetting!")
       this.setState({ 
-        characters: this.state.characters.map(character => { return { ...character, clicked : false } }),
+        characters: this.state.characters.map(character => { return { ...character, isClicked : false } }),
         score: 0
       })
       console.log("reset")
