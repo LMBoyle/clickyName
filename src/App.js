@@ -9,8 +9,6 @@ import Title from "./components/Title/Title";
 import Score from "./components/Score/Score";
 import characters from "./characters.json"
 
-// Vars ======================================================================
-
 // Export ====================================================================
 
 export default
@@ -46,10 +44,20 @@ export default
         })
         // Shuffle
         this.shuffle()
-        console.log(this.state.characters)
+        console.log("Updated\n") 
+        this.state.characters.map(character => console.log(character.name + " " + character.isClicked))
+        console.log("================================================================")
       }
+      // If is clicked is true
       else {
-        alert("Already clicked!")
+        alert("Game Over!")
+        this.setState({ 
+          characters: this.state.characters.map(character => character.isClicked = false),
+          score: 0
+        })
+        console.log("Reset\n") 
+        this.state.characters.map(character => console.log(character.name + " " + character.isClicked))
+        console.log("================================================================")
       }
     }
 
