@@ -35,15 +35,6 @@
   margin-top: 18px;
 }
 
-/* .card > .clicked {
-  color: #ff1744;
-  font-size: 48px;
-  position: absolute;
-  top: -20px;
-  right: 5px;
-  cursor: pointer;
+.card:hover {
+  transform: scale(1.1);
 }
-
-.card > .clicked:hover {
-  color: #d50000;
-} */
