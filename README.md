@@ -1,4 +1,4 @@
-# clickyGame
+# Clicky Game
 Test your memory with this fun, Rick and Morty themed game. 
 
 ## Instructions

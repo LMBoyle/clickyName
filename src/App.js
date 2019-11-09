@@ -7,29 +7,27 @@ import Wrapper from "./components/Wrapper/Wrapper";
 import HeadDiv from "./components/HeadDiv/HeadDiv"
 import Title from "./components/Title/Title";
 import Score from "./components/Score/Score";
-import initCharacters from "./characters.json"
+import characters from "./characters.json"
 
 // Functions =================================================================
 
 class App extends Component {
-  
   state = {
-    characters: initCharacters,
+    characters,
     score: 0,
   };
 
   // Shuffle the cards
   shuffle = () => {
-    if (this.state.score === 12) {
-      alert ("you win!")
-    }
-    else {
-      this.setState({
-        characters: this.state.characters.sort(function(a,b){
-          return 0.5 - Math.random()
-        })
+    console.log("\n================================= Current Data ===============================")
+    console.log(this.state.characters)
+    console.log("==============================================================================\n")
+
+    this.setState({
+      characters: this.state.characters.sort(function(a,b){
+        return 0.5 - Math.random()
       })
-    }
+    })
   }
 
   // When clicked, set the character to clicked
@@ -37,38 +35,57 @@ class App extends Component {
     console.log("you clicked on the " + id + " character");
     // Find the character with the id of the clicked card
     let clickedChar = this.state.characters.find(char => char.id === id);
-
+    
 
     // If is clicked is false
     if (!clickedChar.isClicked) {
       clickedChar.isClicked = true
-    
+
+      console.log("start score: ", this.state.score)
+
       this.setState({
         characters: this.state.characters,
         score: this.state.score + 1
       })
-      // Shuffle
-      this.shuffle()
-      console.log("Updated\n") 
+
+      console.log("\n============================ Updated  ======================================")
       this.state.characters.map(character => console.log(character.name + " " + character.isClicked))
-      console.log("================================================================")
+      console.log("============================================================================\n")
+
+      console.log("updated score: ", this.state.score)
+      // If score = 12,         alert you win,       else shuffle 
+      this.state.score === 11 ? this.winGame() : this.shuffle()
     }
     // If is clicked is true
     else {
       alert("Game Over!")
-      console.log("resetting!")
-      this.setState({ 
-        characters: this.state.characters.map(character => character.isClicked = false),
-        score: 0
-      })
-      console.log("reset")
-      console.log(this.state.characters)
-      console.log("================================================================")
-      // Shuffle
-      this.shuffle()
+      this.resetData()
     }
   }
 
+  // At the end of a game, reset the date
+  resetData = () => {
+    const newData = this.state.characters.map(item => item.isClicked = false)
+
+    this.setState ({
+      characters: this.state.characters,
+      score: 0
+    })
+
+    console.log("\n============================ Reset Data ======================================")
+    console.log(newData)
+    console.log("==============================================================================\n")
+
+    return this.shuffle();
+  };
+
+  // If user wins
+  winGame = () => {
+    alert("You win!")
+    this.resetData()
+  }
+
+  // Render the page
   render() {
     return (
       <Wrapper>
