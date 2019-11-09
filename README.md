@@ -14,10 +14,11 @@ Click on each character, but only click each one once. Click on a character more
 How to use react to build a website.
 
 ## Demo
-![Demo Gif]()
+![Demo Gif](./public/clickyGameDemo.gif)
 
 ## Future Development/Improvements
 - [ ] Mobile Responsive
+- [ ] Change alerts to modals
 - [ ] Add other themes
 
 ## Links
