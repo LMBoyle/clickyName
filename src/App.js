@@ -7,13 +7,14 @@ import Wrapper from "./components/Wrapper/Wrapper";
 import HeadDiv from "./components/HeadDiv/HeadDiv"
 import Title from "./components/Title/Title";
 import Score from "./components/Score/Score";
-import characters from "./characters.json"
+import initCharacters from "./characters.json"
 
 // Functions =================================================================
 
 class App extends Component {
+  
   state = {
-    characters,
+    characters: initCharacters,
     score: 0,
   };
 
@@ -57,11 +58,12 @@ class App extends Component {
       alert("Game Over!")
       console.log("resetting!")
       this.setState({ 
-        characters: this.state.characters.map(character => { return { ...character, isClicked : false } }),
+        characters: this.state.characters.map(character => character.isClicked = false),
         score: 0
       })
       console.log("reset")
       console.log(this.state.characters)
+      console.log("================================================================")
       // Shuffle
       this.shuffle()
     }
