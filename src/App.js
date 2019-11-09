@@ -58,7 +58,7 @@ export default
         <Wrapper>
           <HeadDiv>
             <Title> Rick and Morty Clicky Game </Title>
-            <Score> {this.state.score} </Score>
+            <Score> Score: {this.state.score} </Score>
           </HeadDiv>
 
           {this.state.characters.map(character => (

@@ -6,7 +6,7 @@ import "./HeadDiv.css";
 // Functions =================================================================
 
 function HeadDiv(props) {
-  return <div className="HeadDiv">{props.children}</div>;
+  return <div className="headDiv">{props.children}</div>;
 }
 
 // Export ====================================================================
