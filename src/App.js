@@ -52,12 +52,11 @@ export default
       else {
         alert("Game Over!")
         this.setState({ 
-          characters: this.state.characters.map(character => character.isClicked = false),
+          characters: this.state.characters.map(character => { return { ...character, clicked : false } }),
           score: 0
         })
-        console.log("Reset\n") 
-        this.state.characters.map(character => console.log(character.name + " " + character.isClicked))
-        console.log("================================================================")
+        // Shuffle
+        this.shuffle()
       }
     }
 
