@@ -19,11 +19,16 @@ class App extends Component {
 
   // Shuffle the cards
   shuffle = () => {
-    this.setState({
-      characters: this.state.characters.sort(function(a,b){
-        return 0.5 - Math.random()
+    if (this.state.score === 12) {
+      alert ("you win!")
+    }
+    else {
+      this.setState({
+        characters: this.state.characters.sort(function(a,b){
+          return 0.5 - Math.random()
+        })
       })
-    })
+    }
   }
 
   // When clicked, set the character to clicked
@@ -31,6 +36,7 @@ class App extends Component {
     console.log("you clicked on the " + id + " character");
     // Find the character with the id of the clicked card
     let clickedChar = this.state.characters.find(char => char.id === id);
+
 
     // If is clicked is false
     if (!clickedChar.isClicked) {
@@ -49,13 +55,13 @@ class App extends Component {
     // If is clicked is true
     else {
       alert("Game Over!")
+      console.log("resetting!")
       this.setState({ 
         characters: this.state.characters.map(character => { return { ...character, clicked : false } }),
         score: 0
       })
-      if (this.state.score === 12) {
-        alert("You win!")
-      }
+      console.log("reset")
+      console.log(this.state.characters)
       // Shuffle
       this.shuffle()
     }
