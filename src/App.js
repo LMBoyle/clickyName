@@ -61,12 +61,10 @@ class App extends Component {
     }
     // If is clicked is true
     else {
-      // alert("Game Over!")
       this.setState({
         endGame: true,
         userWon: false
       })
-      // this.resetData()
     }
   }
 
@@ -90,14 +88,13 @@ class App extends Component {
 
   // If user wins
   winGame = () => {
-    // alert("You win!")
     this.setState({
       endGame: true,
       userWon: true
     })
-    // this.resetData()
   }
 
+  
   // Render the page
   render() {
     return (
@@ -108,8 +105,7 @@ class App extends Component {
         </HeadDiv>
 
         <Alert
-          style={{ display: this.state.endGame ? "block" : "none" }}
-          // style={{display : "none"}}
+          show={this.state.endGame ? "visible" : "hidden" }
           type={this.state.userWon ? "success" : "danger"}
           onClick={this.resetData}
         >

@@ -18,7 +18,7 @@ How to use react to build a website.
 
 ## Future Development/Improvements
 - [ ] Mobile Responsive
-- [ ] Change alerts to modals
+- [X] Change alerts to ~~modals~~ bootstrap alerts
 - [ ] Add other themes
 
 ## Links
