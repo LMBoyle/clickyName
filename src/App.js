@@ -7,6 +7,7 @@ import Wrapper from "./components/Wrapper/Wrapper";
 import HeadDiv from "./components/HeadDiv/HeadDiv"
 import Title from "./components/Title/Title";
 import Score from "./components/Score/Score";
+import Alert from './components/Alert/Alert';
 import characters from "./characters.json"
 
 // Functions =================================================================
@@ -15,6 +16,8 @@ class App extends Component {
   state = {
     characters,
     score: 0,
+    endGame: false,
+    userWon: false,
   };
 
   // Shuffle the cards
@@ -58,8 +61,12 @@ class App extends Component {
     }
     // If is clicked is true
     else {
-      alert("Game Over!")
-      this.resetData()
+      // alert("Game Over!")
+      this.setState({
+        endGame: true,
+        userWon: false
+      })
+      // this.resetData()
     }
   }
 
@@ -69,7 +76,9 @@ class App extends Component {
 
     this.setState ({
       characters: this.state.characters,
-      score: 0
+      score: 0,
+      endGame: false,
+      userWon: false
     })
 
     console.log("\n============================ Reset Data ======================================")
@@ -81,8 +90,12 @@ class App extends Component {
 
   // If user wins
   winGame = () => {
-    alert("You win!")
-    this.resetData()
+    // alert("You win!")
+    this.setState({
+      endGame: true,
+      userWon: true
+    })
+    // this.resetData()
   }
 
   // Render the page
@@ -94,6 +107,15 @@ class App extends Component {
           <Score> Score: {this.state.score} </Score>
         </HeadDiv>
 
+        <Alert
+          style={{ display: this.state.endGame ? "block" : "none" }}
+          // style={{display : "none"}}
+          type={this.state.userWon ? "success" : "danger"}
+          onClick={this.resetData}
+        >
+          {this.state.userWon ? "You Won!" : "You Lost!"}
+        </Alert>
+
         {this.state.characters.map(character => (
           <CharCard
             key={character.id}
@@ -101,6 +123,7 @@ class App extends Component {
             onClick={() => this.setClicked(character.id)}
           />
         ))}
+
       </Wrapper>
     );
   }
