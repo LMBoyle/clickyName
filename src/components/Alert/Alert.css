@@ -1,18 +1,21 @@
 .alert {
   text-align: center;
   font-size: 50px;
-  height: 100px;
-  width: 100%;
+  height: 166px;
+  width: 1479px;
+  line-height: 120px;
+  font-weight: bold;
   margin-top: 18px;
+  position:absolute;
+  top: 0;
 }
 
 .visible {
-  position: static;
   opacity: 1;
   transition: opacity 1s linear;
 }
 
 .hidden {
-  position:absolute;
   opacity: 0;
+  transition: opacity 1s linear;
 }

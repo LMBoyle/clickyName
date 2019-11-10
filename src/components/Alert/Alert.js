@@ -5,7 +5,7 @@ function Alert(props) {
   return (
     <div
       role="alert"
-      className={`alert alert-${props.type} ${props.show}`}
+      className={`alert alert-${props.type} align-middle ${props.show}`}
       style={{ ...props.style }}
     >
       {props.children}
