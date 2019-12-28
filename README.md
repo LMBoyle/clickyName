@@ -19,6 +19,7 @@ Click on each character, but only click each one once. Click on a character more
 ## Future Development/Improvements
 - [ ] Mobile Responsive
 - [X] Change alerts to ~~modals~~ bootstrap alerts
+- [ ] Add timeouts to alerts
 - [ ] Add other themes
 
 &copy; 2019 [Luke Boyle](https://lmboyle.github.io/)
